@@ -1,5 +1,5 @@
 
-def path : System.FilePath := System.mkFilePath ["foo.txt"]
+def path : System.FilePath := System.mkFilePath ["LeanAlg", "coding", "foo.txt"]
 
 def f : IO String := IO.FS.readFile path
 
