@@ -4,7 +4,7 @@ universe μ ν
 
 variable (k : Type μ) [Field k]
 
-def IsCr (r : ℕ) : Prop :=
+def IsCr (r : ℕ) (k : Type μ) [Field k] : Prop :=
   ∀ (n : ℕ),
   ∀ f : MvPolynomial (Fin n) k, 
   ∀ {d : ℕ},
