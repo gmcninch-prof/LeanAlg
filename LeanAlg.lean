@@ -8,3 +8,4 @@
 --import LeanAlg.CnFields.Defs
 
 import LeanAlg.MultiLinear
+import LeanAlg.Symmetric
