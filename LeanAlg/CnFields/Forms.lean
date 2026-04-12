@@ -20,7 +20,7 @@ def SymmMultilinear (R M N ι : Type )[CommRing R] [AddCommGroup M] [AddCommGrou
 
 def SymmUMP (R M N ι : Type) [CommRing R] [AddCommGroup M] [AddCommGroup N]
     [Module R M] [Module R N] [Fintype ι] : 
-  (SymmetricPower R ι M →ₗ[R] N) ≃ₗ[R] MultilinearMap R (fun (i:ι) => M) N := by sorry
+  (SymmetricPower R ι M →ₗ[R] N) ≃ₗ[R] SymmMultilinearMap R (fun (i:ι) => M) N := by sorry
   
 
 
