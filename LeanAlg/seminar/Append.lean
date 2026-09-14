@@ -10,6 +10,8 @@ def b : List String := [ "a", "bc" ]
 
 def c : List Nat := [500, 100000]
 
+def d : List ℚ := [ 1 ,2 ]
+
 #eval a.length
 #eval b.length
 
@@ -24,6 +26,10 @@ def append {α : Type} (xs ys : List α) : List α :=
 #eval append a c
 
 #eval append b b 
+
+
+#eval append d (a.map (↑ · : ℕ → ℚ))
+
 
 -- a theorem, and its proof
 
