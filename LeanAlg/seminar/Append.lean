@@ -57,3 +57,5 @@ theorem append_assoc' {α : Type} (xs ys zs : List α) :
   induction xs with
   | nil => rw [ append, append ]
   | cons x xs ih => simp only [ ih, append ]
+
+
