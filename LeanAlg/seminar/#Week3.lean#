@@ -1,0 +1,5 @@
+import Mathlib.Tactic
+
+/-! Weeks 3 examples for Lean seminar -/
+
+
