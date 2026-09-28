@@ -24,9 +24,10 @@ variable (x y : ℝ)
 example {p q : Prop} (hp : p) (hq : q) : p ∧ q := by
   constructor
   · exact hp
-  · exact hq
-
+  · exact hq·· ̇
+  
 #check absurd
+
 
 example : ¬ (1 = 0) := by norm_num
 
@@ -46,4 +47,12 @@ example {x y : ℝ} (h : x ≤ y ∧ x ≠ y) : ¬y ≤ x := by
   contrapose! h₁
   exact le_antisymm h₀ h₁
 
+
+example :  Sum String Nat := Sum.inl "foo" 
+
+
+inductive MyType 
+| N : ℕ → MyType
+| S : String → MyType
+| R : ℚ -> MyType
 
