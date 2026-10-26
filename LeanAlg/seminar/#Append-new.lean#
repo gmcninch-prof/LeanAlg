@@ -1,0 +1,24 @@
+import Mathlib.Tactic
+
+/-! live demo -/
+
+def append {α : Type} (xs ys : List α) : List α :=
+  match xs with
+  | []      => ys
+  | z :: zs => z :: append zs ys
+
+def a : List ℚ := [1,1/2]
+def b : List ℚ := [3,4,5,1/3]
+
+#eval b.length 
+
+theorem append_length {α : Type} (xs ys : List α) :
+    (append xs ys).length = xs.length + ys.length := by
+  induction xs with
+  | nil => 
+     simp [append]
+  | cons z zs ih => 
+     simp only [append,List.length_cons]
+     rw [ih]
+     ring 
+
